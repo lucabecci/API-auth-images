@@ -1,4 +1,5 @@
 .env
+uploads
 AUTH-IMAGES UML.pdf
 # Created by https://www.toptal.com/developers/gitignore/api/node,yarn,git,linux,vscode
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,git,linux,vscode

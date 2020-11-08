@@ -7,7 +7,7 @@ class IndexRouter {
 
   constructor() {
     this._router = Router();
-    this._indexController = new IndexController;
+    this._indexController = new IndexController();
     this.routes();
   }
 

@@ -30,8 +30,12 @@ STEPS:
 
  Create routes and controllers for index
  Add logic for index endpoint
-## Create routes and controllers for images
+
+ Create and configurate multer
+ Create the class checks and methods for this
+ Set multer in image service, create routes and controllers for images
 ## Add logic for images endpoint
+
 ## Create routes and controllers for auth
 ## Add logic for auth endpoint
 
