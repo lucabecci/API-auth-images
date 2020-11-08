@@ -1,12 +1,13 @@
 import { Router, IRouter } from "express";
 import IndexController from "../controllers/index.controller";
-class IndexRoutes {
+
+class IndexRouter {
   public _router: IRouter;
   public _indexController: IndexController;
 
   constructor() {
     this._router = Router();
-    this._indexController = new IndexController();
+    this._indexController = new IndexController;
     this.routes();
   }
 
@@ -15,4 +16,4 @@ class IndexRoutes {
   }
 }
 
-export default IndexRoutes;
+export default IndexRouter;

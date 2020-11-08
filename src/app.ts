@@ -3,18 +3,26 @@ import cors from "cors";
 import morgan from "morgan";
 import Database from "./database/database";
 import config from "./config/config";
-import IndexRoutes from "./routes/index.routes";
+
+//routes imp
+import IndexRouter from "./routes/index.routes";
+import ImagesRouter from './routes/images.routes'
+import AuthRouter from './routes/auth.routes'
+
 class App {
   public _app: Application;
   public _database: Database;
   public _port: string | number;
-  public _indexRoutes: IndexRoutes;
-
+  public _indexRouter: IndexRouter;
+  public _imagesRouter: ImagesRouter
+  public _authRouter: AuthRouter
   constructor() {
     this._app = express();
-    this._database = new Database();
+    this._database = new Database;
     this._port = config.PORT;
-    this._indexRoutes = new IndexRoutes();
+    this._indexRouter = new IndexRouter;
+    this._imagesRouter = new ImagesRouter;
+    this._authRouter = new AuthRouter
     this.database();
     this.config();
     this.routes();
@@ -31,8 +39,10 @@ class App {
     this._app.use(cors());
   }
 
-  public routes(): void {
-    this._app.use("/", this._indexRoutes._router);
+  public async routes(): Promise<void> {
+    await this._app.use("/", this._indexRouter._router);
+    await this._app.use('/images', this._imagesRouter._router)
+    await this._app.use('/', this._authRouter._router)
   }
 
   public async run(): Promise<void> {
