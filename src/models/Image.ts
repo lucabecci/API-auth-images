@@ -26,7 +26,7 @@ const imageSchama: Schema = new Schema(
       trim: true,
     },
     user_id: {
-      type: Number,
+      type: String,
       required: true,
     },
   },
@@ -35,4 +35,4 @@ const imageSchama: Schema = new Schema(
   }
 );
 
-export default model<IImage>("Image", imageSchama);
+export default  model<IImage>("Image", imageSchama);

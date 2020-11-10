@@ -1,9 +1,11 @@
 import express, { Application } from "express";
 import cors from "cors";
 import morgan from "morgan";
-import path from 'path'
+import path from "path";
+import passport from 'passport'
 import Database from "./database/database";
 import config from "./config/config";
+import passportMiddleware from './middlewares/passport'
 
 //routes imp
 import IndexRouter from "./routes/index.routes";
@@ -38,7 +40,9 @@ class App {
     this._app.use(express.urlencoded({ extended: false }));
     this._app.use(morgan("dev"));
     this._app.use(cors());
-    this._app.use('/uploads', express.static(path.resolve('uploads')))
+    this._app.use("/uploads", express.static(path.resolve("uploads")));
+    this._app.use(passport.initialize())
+    passport.use(passportMiddleware)
   }
 
   public async routes(): Promise<void> {

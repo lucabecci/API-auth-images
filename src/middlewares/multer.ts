@@ -11,6 +11,6 @@ class MulterStorage {
   });
 }
 
-const multerStorage = new MulterStorage
+const multerStorage = new MulterStorage();
 
 export default multer({ storage: multerStorage.storage });

@@ -34,21 +34,19 @@ STEPS:
  Create and configurate multer
  Create the class checks and methods for this
  Set multer in image service, create routes and controllers for images
-## Add logic for images endpoint
+ Add logic for images endpoint
 
-## Create routes and controllers for auth
-## Add logic for auth endpoint
-
-## Create and configurate multer
-## Set controllers with multer
-
-## Create JWT
-## Create controller in auth where this contains the logic for JWT
-## Create the logic for passport
+ Create routes and controllers for auth
+ Add logic for auth endpoint
 
 
-## Protect the routes of images 
-## Use JWT and passport for protect all routes and methods in images endpoint 
+ Create JWT
+ Create controller in auth where this contains the logic for JWT
+ Create the logic for passport
+
+
+ Protect the routes of images 
+ Use JWT and passport for protect all routes and methods in images endpoint 
 
 
 ## Optimizing app, search errors in the app and if have bad code will need repair 

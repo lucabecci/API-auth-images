@@ -7,6 +7,13 @@ class IndexController {
       msg: "This is my index for my API",
     });
   };
+
+  public private: Handler = (req: Request, res: Response): Response => {
+    return res.status(201).json({
+      success: true,
+      msg: "private",
+    });
+  };
 }
 
 export default IndexController;

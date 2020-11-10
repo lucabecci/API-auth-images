@@ -8,9 +8,10 @@ class AuthRouter {
     this._authController = new AuthController();
     this.routes();
   }
-
+  
   public routes(): void {
-    this._router.get("/login", this._authController.login);
+    this._router.post("/login", this._authController.login);
+    this._router.post("/register", this._authController.register);
   }
 }
 
