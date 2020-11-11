@@ -23,21 +23,25 @@ class Check {
   };
 
   public registerCheck = (
-    name: string, username: string, email: string,
-    password: string, age: number, from: string
+    name: string,
+    username: string,
+    email: string,
+    password: string,
+    age: number,
+    from: string
   ): boolean => {
-    if(
-      name == null || 
+    if (
+      name == null ||
       username == null ||
       email == null ||
       password == null ||
       age == null ||
       from == null
-      ){
-        return true
-      }
-      return false
-  }
+    ) {
+      return true;
+    }
+    return false;
+  };
 }
 
 export default Check;

@@ -35,4 +35,4 @@ const imageSchama: Schema = new Schema(
   }
 );
 
-export default  model<IImage>("Image", imageSchama);
+export default model<IImage>("Image", imageSchama);

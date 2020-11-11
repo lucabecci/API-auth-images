@@ -49,6 +49,6 @@ STEPS:
  Use JWT and passport for protect all routes and methods in images endpoint 
 
 
-## Optimizing app, search errors in the app and if have bad code will need repair 
+ Optimizing app, search errors in the app and if have bad code will need repair 
 
 ## Edit README.md and add the documentation of the api

@@ -1,6 +1,6 @@
 import { Router, IRouter } from "express";
 import IndexController from "../controllers/index.controller";
-import passport from 'passport'
+import passport from "passport";
 class IndexRouter {
   public _router: IRouter;
   public _indexController: IndexController;
@@ -14,9 +14,11 @@ class IndexRouter {
   public routes(): void {
     this._router.get("/", this._indexController.index);
 
-    this._router.get('/private', 
-    passport.authenticate('jwt', {session: false}) 
-    ,this._indexController.private)
+    this._router.get(
+      "/private",
+      passport.authenticate("jwt", { session: false }),
+      this._indexController.private
+    );
   }
 }
 
