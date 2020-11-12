@@ -49,21 +49,21 @@ yarn run start //execute the prod code with node.
         |-- config.ts
     |-- controllers
         |-- auth.controller.ts
-				|-- images.controller.ts
-				|-- index.controller.ts
+		|-- images.controller.ts
+		|-- index.controller.ts
     |-- database
         |-- database.ts
     |-- helpers
         |-- checks.ts
 		|-- middlewares
         |-- multer.ts
-				|-- passport.ts
+		|-- passport.ts
     |-- models
         |-- Image.ts
-				|-- User.ts
+		|-- User.ts
     |-- routes
         |-- auth.routes.ts
-				|-- images.routes.ts
+		|-- images.routes.ts
         |-- index.routes.ts
     |-- app.ts
     |-- index.ts
